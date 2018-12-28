@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify ./input/index.js -o ./output/bundle.js -t [ babelify --presets [ @babel/preset-env @babel/preset-react ] --plugins [ @babel/plugin-proposal-class-properties ] ]"
+    "build": "browserify ./input/index.js -o ./output/bundle.js -t [ babelify --presets [ @babel/preset-env @babel/preset-react ] --plugins [ @babel/plugin-proposal-class-properties ] ] && npx http-server ./output"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "babelify": "^10.0.0"
   },
   "dependencies": {
+    "http-server": "^0.11.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   }
