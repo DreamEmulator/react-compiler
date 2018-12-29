@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify ./input/index.js -o ./output/bundle.js -t [ babelify --presets [ @babel/preset-env @babel/preset-react ] --plugins [ @babel/plugin-proposal-class-properties ] ] && npx http-server ./output"
+    "build": "browserify -g ./input/index.js -o ./output/bundle.js -t [browserify-css] -t [babelify --presets [ @babel/preset-env @babel/preset-react ] --plugins [ @babel/plugin-proposal-class-properties ] ] && npx http-server ./output"
   },
   "author": "",
   "license": "ISC",
@@ -14,10 +14,14 @@
     "@babel/plugin-proposal-class-properties": "^7.2.3",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
-    "babelify": "^10.0.0"
+    "babelify": "^10.0.0",
+    "browserify-css": "^0.14.0"
   },
   "dependencies": {
+    "bootstrap": "^4.2.1",
     "http-server": "^0.11.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   }
